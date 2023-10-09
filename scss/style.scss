@@ -69,15 +69,31 @@ body {
 	background: #011627;
 	margin: 20px;
    width: calc(100% - 40px);
-   height: calc(100% - 40px);
+   min-height: calc(100% - 40px);
    box-sizing: border-box;
 	position: relative;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	@media (max-width: 768px){
 		margin: 10px;
 		width: calc(100% - 20px);
 		height: calc(100% - 20px);
 	}
+}
+
+.comment {
+	color: #607B96;
+	line-height: 150%;
+	@media (max-width: 768px){
+		font-size: 14px;
+	}
+}
+.page {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 // ========= Basic css ===========
@@ -135,7 +151,7 @@ body {
 			position: fixed;
 			width: 100%;
 			height: 100%;
-			top: 83px;
+			top: 62px;
     		left: 10px;
 			right: 30px;
 			transition: all 0.5s ease-in-out 0s;
@@ -253,9 +269,87 @@ body {
 
 // ====== Burger-Button css ======
 
-// ========= Main css ============
+// ======= Home-Page css =========
+.menu-open .main {
+	opacity: 0;
+}
+.main {
+	opacity: 1;
+	transition: all 0.3s ease 0s;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@media (max-width: 1024px){
+			justify-content: center;
+		}
+	}
 
+	&__content {
+		display: flex;
+		flex-direction: column;
+	}
 
+	&__subtitle {
+		color: #E5E9F0;
+		font-size: 18px;
+	}
 
-// ========= Main css ============
+	&__name {
+		color: #E5E9F0;
+		font-size: 62px;
+		@media (max-width: 768px){
+			font-size: 52px;
+		}
+		@media (max-width: 425px){
+			font-size: 48px;
+		}
+		@media (max-width: 390px){
+			font-size: 42px;
+		}
+		@media (max-width: 350px){
+			font-size: 38px;
+		}
+	}
+
+	&__stack {
+		color: #4D5BCE;
+		font-size: 32px;
+		padding-bottom: 81px;
+		@media (max-width: 768px){
+			padding-bottom: 190px;
+			color: #43D9AD;
+			font-size: 20px;
+		}
+	}
+
+	&__comment {
+		padding-bottom: 9px;
+	}
+
+	&__link {
+		color: #fff;
+		line-height: 140%;
+		& span:first-child {
+			color: #4D5BCE;
+		}
+		& span:nth-child(2) {
+			color: #43D9AD;
+		}
+		& a {
+			color: #E99287;
+			transition: all 0.3s ease 0s;
+		}
+		@media (max-width: 768px){
+			font-size: 14px;
+		}
+	}
+
+	&__image {
+		@media (max-width: 1024px){
+			  display: none;
+		}
+	}
+}
+
 
