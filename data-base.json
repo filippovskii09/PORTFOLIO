@@ -1,0 +1,44 @@
+{
+	"projects": [
+		{
+			"id":1,
+			"name": "Abba",
+			"img": "images/project-image/abba.png",
+			"altImage": "Abba",
+			"text": "dignissim convallis aenean et tortor at risus viverra adipiscing at in tellus integer feugiat scelerisque",
+			"link": "https://filippovskii09.github.io/Abba/"
+		},
+		{
+			"id":2,
+			"name": "Abigail",
+			"img": "images/project-image/abigail.png",
+			"altImage": "Abigail",
+			"text": "dignissim convallis aenean et tortor at risus viverra adipiscing at in tellus integer feugiat scelerisque",
+			"link": "https://filippovskii09.github.io/Abigail/"
+		},
+		{
+			"id":3,
+			"name": "Quicktik",
+			"img": "images/project-image/quickitik.png",
+			"altImage": "Quicktik",
+			"text": "dignissim convallis aenean et tortor at risus viverra adipiscing at in tellus integer feugiat scelerisque",
+			"link": "https://filippovskii09.github.io/Quicktik/"
+		},
+		{
+			"id":4,
+			"name": "Rythm",
+			"img": "images/project-image/rythm.png",
+			"altImage": "Rythm",
+			"text": "dignissim convallis aenean et tortor at risus adipiscing at in tellus integer feugiat viverra adipiscing at in tellus integer feugiat scelerisque",
+			"link": "https://filippovskii09.github.io/Rythm/"
+		},
+		{
+			"id":5,
+			"name": "FarmVest",
+			"img": "images/project-image/farm-vest.png",
+			"altImage": "FarmVest",
+			"text": "dignissim convallis aenean et tortor at risus adipiscing at in tellus integer feugiat viverra adipiscing at in tellus integer feugiat scelerisque",
+			"link": "https://filippovskii09.github.io/FarmVest/home.html"
+		}
+	]
+}

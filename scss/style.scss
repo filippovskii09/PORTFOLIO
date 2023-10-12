@@ -103,7 +103,6 @@ body {
 .header {
 	display: flex;
 	justify-content: space-between;
-	padding: 0px 22px;
 	align-items: center;
 	border-bottom: 1px solid #1E2D3D;
 	@media (max-width: 950px){
@@ -122,6 +121,7 @@ body {
 	&__logo {
 		padding: 17px 0px;
 		padding-right: 150px;
+		padding-left: 22px;
 		border-right: 1px solid #1E2D3D;
 		color: #607B96;
 		@media (max-width: 950px){
@@ -136,7 +136,7 @@ body {
 		padding: 17px 0px;
 		border-right: none !important;
 		border-left: 1px solid #1E2D3D;
-		padding-right: 0 !important;
+		padding-right: 22px;
 		@media (max-width: 768px){
 			display: none !important;
 		}
@@ -178,6 +178,8 @@ body {
 			padding: 17px 0px;
 			width: 80%;
 			border-bottom:1px solid #1E2D3D;
+			background: #011627;
+			border-left: 1px solid #1E2D3D;
 		}
 	}
 
@@ -210,9 +212,10 @@ body {
 	color:#fff;
 	border-bottom: 3px solid #FEA55F;
 	@media (max-width: 768px){
-		  border-bottom: none;
+		border-bottom: none;
 	}
 }
+
 // ========= Header css ==========
 
 // ====== Burger-Button css ======
@@ -297,7 +300,8 @@ body {
 
 	&__name {
 		color: #E5E9F0;
-		font-size: 62px;
+		font-size: 52px;
+		padding: 7px 0px;
 		@media (max-width: 768px){
 			font-size: 52px;
 		}
@@ -325,6 +329,11 @@ body {
 
 	&__comment {
 		padding-bottom: 9px;
+		&:nth-child(4) {
+			@media (max-width: 1024px){
+				display: none;
+			}
+		}
 	}
 
 	&__link {
@@ -353,3 +362,166 @@ body {
 }
 
 
+
+@keyframes typing {
+	from {
+		 width: 0;
+	}
+	to {
+		 width: 100%;
+	}
+}
+
+@keyframes blink-caret {
+	from, to {
+		 border-color: transparent;
+	}
+	50% {
+		 border-color: #fff;
+	}
+}
+
+
+
+
+// footer
+
+.footer {
+
+	&__socials {
+		display: flex;
+	}
+
+	&__social {
+	}
+
+	&__link {
+		transition: all 0.3s ease 0s;
+		& img {
+			width: 24px;
+			height: 24px;
+		}
+	}
+}
+.projects-page {
+	justify-content: flex-start;
+}
+.projects {
+	&::-webkit-scrollbar {
+		width: 18.5px;
+		border-left: 1px solid #1E2D3D;
+		border-bottom: 1px solid #1E2D3D;
+	 }
+	 
+	 /* Track */
+	 &::-webkit-scrollbar-track {
+		border-radius: 0px;
+	 }
+	  
+	 /* Handle */
+	 &::-webkit-scrollbar-thumb {
+		background: #607B96; 
+		border-radius: 0px;
+		transition: all 0.3s ease 0s;
+	 }
+	 
+	 /* Handle on hover */
+	 &::-webkit-scrollbar-thumb:hover {
+		background: #435669; 
+		transition: all 0.3s ease 0s;
+	 }
+}
+.projects {
+	padding-top: 90px;
+	height: 700px;
+	overflow-y: scroll;
+	@media (max-width: 500px){
+		padding-top: 30px;
+	}
+	&__container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0px 15px;
+	}
+}
+.projects__list {
+	display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    grid-gap: 40px;
+	 justify-items: center;
+	 @media (max-width: 425px){
+		grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+	 }
+	 @media (max-width: 360px){
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	 }
+}
+
+.projects-item {
+	max-width: 370px;
+	&__name {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding-bottom: 14px;
+		& span:first-child {
+			color: #5565E8;
+			font-weight: 700;
+		}
+	}
+
+	&__comment {
+	}
+
+	&__wrapper {
+		border-radius: 15px;
+		border: 1px solid #1E2D3D;
+		background: #011221;
+	}
+
+	&__image {
+		border-radius: 15px 15px 0px 0px;
+		max-width: 370px;
+		overflow: hidden;
+		& img {
+			border-radius: 15px 15px 0px 0px;
+			border: 1px solid #1E2D3D;
+			width: 100%;
+			height: 140px;
+			border-radius: 15px 15px 0px 0px;
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&__content {
+		padding: 24px 36px 31px 31px;
+		@media (max-width: 500px){
+			padding: 20px;
+			padding-bottom: 30px;
+		}
+	}
+
+	&__text {
+		color: #607B96;
+		font-size: 18px;
+		line-height: 150%; /* 27px */
+		padding-bottom: 22px;
+		@media (max-width: 500px){
+			font-size: 14px;
+		}
+	}
+
+	&__link {
+		border-radius: 8px;
+		background: #1C2B3A;
+		color: #FFF;
+		font-size: 14px;
+		padding: 10px 14px;
+		transition: all 0.3s ease 0s;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+			transform: scale(1.05);
+		}
+	}
+}
