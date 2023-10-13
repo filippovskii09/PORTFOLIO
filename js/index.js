@@ -50,30 +50,31 @@ window.addEventListener('DOMContentLoaded', () => {
 						</div>
 						<div class='projects-item__content'>
 							<p class='projects-item__text'>${item.text}</p>
-							<a class='projects-item__link' href=${item.link}>view-project</a>
+							<a class='projects-item__link' href=${item.resultLink}>view-result</a>
+							<a class='projects-item__link' href=${item.codeLink}>view-code</a>
 						</div>
 					</div>
 				`
 				ul.appendChild(li)
-				if (item.text.lengh > 8) {
-					const readMoreButton = document.createElement("button");
-					readMoreButton.classList.add('projects-item__button')
-					readMoreButton.innerText = "Read more";
-					let isExpanded = false;
+				// if (item.text.lengh > 8) {
+				// 	const readMoreButton = document.createElement("button");
+				// 	readMoreButton.classList.add('projects-item__button')
+				// 	readMoreButton.innerText = "Read more";
+				// 	let isExpanded = false;
 
-					readMoreButton.addEventListener('click', () => {
-						isExpanded = !isExpanded;
+				// 	readMoreButton.addEventListener('click', () => {
+				// 		isExpanded = !isExpanded;
 
-						if (isExpanded) {
-							li.querySelector('.projects-item__text').textContent = item.text;
-							readMoreButton.innerText = "Close";
-						}	else {
-							li.querySelector('.projects-item__text').textContent = item.text.slice(0, 8);
-							readMoreButton.innerText = "Read More";
-						}
-					})
-					li.querySelector('projects-item__content').appendChild(readMoreButton);
-				}
+				// 		if (isExpanded) {
+				// 			li.querySelector('.projects-item__text').textContent = item.text;
+				// 			readMoreButton.innerText = "Close";
+				// 		}	else {
+				// 			li.querySelector('.projects-item__text').textContent = item.text.slice(0, 8);
+				// 			readMoreButton.innerText = "Read More";
+				// 		}
+				// 	})
+				// 	li.querySelector('projects-item__content').appendChild(readMoreButton);
+				// }
 			})
 			container.appendChild(ul)
 		
